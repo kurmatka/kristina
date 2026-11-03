@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru" class="lock">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFD6E7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Для Кристины">
+<title>Для самой любимой Кристины 💗</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💗%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Nunito:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg"></div>
+<canvas id="bgfx" aria-hidden="true"></canvas>
+
+<!-- Первый экран -->
+<section id="intro" class="intro">
+  <div class="card glass">
+    <p class="eyebrow">✦ ✧ ✦</p>
+    <h1 class="script">Для самой любимой девочки ❤️</h1>
+    <p class="lead">Я приготовил для тебя кое-что особенное...</p>
+    <button class="btn" id="openHeart">Открыть моё сердце</button>
+  </div>
+  <p class="made">Сделано с любовью специально для тебя</p>
+</section>
+
+<main id="main">
+  <header class="hero">
+    <p class="eyebrow">✦ для тебя ✦</p>
+    <h2 class="script big">Наши моменты</h2>
+    <p class="lead">Листай вниз и нажимай на фотографии 💗</p>
+    <div class="chev" aria-hidden="true">⌄</div>
+  </header>
+  <section class="gallery" id="gallery"></section>
+  <section class="finale">
+    <p class="script fin-t">У меня для тебя есть ещё кое-что...</p>
+    <button class="btn" id="secret">Узнать секрет ❤️</button>
+  </section>
+  <footer class="foot">Сделано с любовью специально для тебя 💗</footer>
+</main>
+
+<!-- Просмотр фотографии -->
+<div class="modal" id="modal" aria-hidden="true" role="dialog">
+  <canvas id="mfx" aria-hidden="true"></canvas>
+  <button class="x" id="mclose" aria-label="Закрыть">✕</button>
+  <figure class="mcard" id="mcard">
+    <div class="mframe"><div class="ph" id="mph"><span id="mhint"></span><img id="mimg" alt=""></div></div>
+    <figcaption class="script" id="mcap"></figcaption>
+    <p class="mmsg" id="mmsg"></p>
+  </figure>
+  <div class="mnav">
+    <button id="mprev" aria-label="Назад">‹</button><span id="mcount"></span><button id="mnext" aria-label="Вперёд">›</button>
+  </div>
+</div>
+
+<!-- Финальный сюрприз -->
+<div class="surprise" id="surprise" aria-hidden="true">
+  <div class="bigheart" id="bheart"><svg viewBox="0 0 100 92"><defs><radialGradient id="hg" cx="35%" cy="28%" r="80%"><stop offset="0" stop-color="#ffd6e7"/><stop offset=".5" stop-color="#ff7fae"/><stop offset="1" stop-color="#d94683"/></radialGradient></defs><path fill="url(#hg)" d="M50 88C10 60 2 38 8 22 14 6 38 4 50 22 62 4 86 6 92 22c6 16-2 38-42 66z"/><path fill="#fff" opacity=".5" d="M20 20c4-8 14-10 20-4-8-1-16 2-20 10z"/></svg></div>
+  <article class="letter glass" id="letter">
+    <p class="rv">Кристина, я просто хочу, чтобы ты знала, насколько ты важна для меня.</p>
+    <p class="rv">Я очень рад, что ты есть в моей жизни. Мне нравится проводить с тобой время, смеяться вместе, обнимать тебя и просто быть рядом.</p>
+    <p class="rv">Ты делаешь мои дни лучше, даже когда сама этого не замечаешь.</p>
+    <p class="rv">Я не знаю, сколько ещё фотографий можно сделать вместе, но я точно знаю, что хочу, чтобы их было очень много.</p>
+    <p class="rv">Спасибо тебе за то, что ты есть.</p>
+    <p class="rv">Я очень сильно тебя люблю. ❤️</p>
+    <p class="rv sig script">Твой любимый ❤️</p>
+    <div class="rv acts">
+      <button class="btn" id="hug">Обнять тебя 🤗</button>
+      <p class="hugnote" id="hugnote">Обнимаю тебя крепко 🤍</p>
+      <button class="btn soft" id="sclose">Вернуться к фото</button>
+    </div>
+  </article>
+</div>
+
+<!-- Музыкальный плеер -->
+<div class="player glass" id="player">
+  <button id="pbtn" aria-label="Музыка вкл/выкл"><span class="eq"><i></i><i></i><i></i></span></button>
+  <input id="pvol" type="range" min="0" max="1" step="0.05" value="0.5" aria-label="Громкость">
+</div>
+
+<canvas id="fx" aria-hidden="true"></canvas>
+<script src="app.js"></script>
+</body>
+</html>
